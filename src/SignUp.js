@@ -20,7 +20,7 @@ const SignUp = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:444/signup', {
+            const response = await axios.post('https://login-backend-healthify.onrender.com/signup', {
                 name,
                 password,
             });
