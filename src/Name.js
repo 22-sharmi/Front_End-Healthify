@@ -26,7 +26,7 @@ function Name() {
       navigate('/next')
       try {
         // const response = await axios.post('http://localhost:8080/users', userData);
-        const response = await axios.post('https://user-backend-healthify.onrender.com/', userData);
+        const response = await axios.post('https://user-backend-healthify-04bt.onrender.com/users', userData);
         console.log(response.data);
         
       } catch (error) {
