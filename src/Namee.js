@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-function Name() {
+function Namee() {
   const [name, setName] = useState('');
   const navigate= useNavigate();
 
@@ -69,4 +69,4 @@ function Name() {
   );
 }
 
-export default Name;
+export default Namee;
