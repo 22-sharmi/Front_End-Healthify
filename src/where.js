@@ -36,7 +36,7 @@ export default function Where() {
           <label htmlFor="cities" className="fs-5">
             Choose a city:
           </label>
-          <select id="cities" name="cities" className="fs-6">
+          <select id="cities" name="cities" className="fs-6" onChange={(e) => selectCity(e.target.value)}>
             <option value="" disabled defaultValue>
               Select City
             </option>
