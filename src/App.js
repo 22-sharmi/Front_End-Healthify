@@ -16,7 +16,7 @@ import Welcome from './Welcome';
 import AgeHeightWeight from './AgeHeightWeight';
 import Gender from './Gender';
 import MultiStepForm from './MultiStepForm';
-import Namee from './Namee';
+import Name from './Name';
 
 export default function App() {
   return (
@@ -29,7 +29,7 @@ export default function App() {
           <Route path="/what" element={<What1 />} />
           {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/where" element={<Where />} />
-          <Route path="/name" element={<Namee />} />
+          <Route path="/name" element={<Name />} />
           <Route path="/lang" element={<Lang />} />
           <Route path="/gen" element={<Gender />} />
           {/* <Route path="/age" element={<Age />} /> */}
