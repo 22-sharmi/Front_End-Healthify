@@ -28,15 +28,14 @@ function Namee() {
       navigate('/next')
       try {
         // const response = await axios.post('http://localhost:8080/users', userData);
-        await axios.post('https://user-backend-healthify.onrender.com/', userData);
-        // const response = await axios.post('https://user-backend-healthify.onrender.com/', userData);
-        // console.log(response.data);
+        await axios.post('https://user-backend-healthify-04bt.onrender.com/users', userData);
+        
       } catch (error) {
         console.error(error);
       }
     }
     else{
-      setErrorMessage('Enter Your Name To Proceed')
+      setErrorMessage('Enter Your Name To Proceed');
     }
     // Clear local storage
     localStorage.removeItem('gender');
@@ -64,14 +63,14 @@ function Namee() {
           className="w-50 fs-5 text-center"
           onChange={(e) => setName(e.target.value)}
         />
-        <br/> 
         <br/>
+        <br/>   
         {errorMessage && (
           <div className="alert alert-danger mb-3" role="alert">
             {errorMessage}
           </div>
         )}
-         
+
         <button className="btn btn-next btn-dark" onClick={handleSubmit}>Submit</button>
       </form>
     </div>
