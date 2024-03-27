@@ -7,6 +7,7 @@ export default function AgeHeightWeight() {
   const [age, setAge] = useState('');
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleNextClick = async () => {
     if (age && height && weight) {
@@ -17,10 +18,10 @@ export default function AgeHeightWeight() {
         navigate('/active');
       } catch (error) {
         console.error('Error:', error);
-        alert('An error occurred. Please try again later.');
+        setErrorMessage('An error occurred. Please try again later.');
       }
     } else {
-      alert('Please fill in all fields.');
+      setErrorMessage('Please fill in all fields.');
     }
   };
 
@@ -66,6 +67,11 @@ export default function AgeHeightWeight() {
               required
             />
           </div>
+          {errorMessage && (
+          <div className="alert alert-danger mb-3" role="alert">
+            {errorMessage}
+          </div>
+        )}
           <div className='d-flex justify-content-between'>
           <a href="/lang" className="btn btn-back">Back</a>
           <button className=" button btn btn-dark" onClick={handleNextClick}>

@@ -6,6 +6,7 @@ import "./Gender.css";
 export default function Gender() {
   const navigate = useNavigate();
   const [selectedGender, setSelectedGender] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
 
   // Function to handle click on a gender card
   const handleCardClick = (gender) => {
@@ -18,15 +19,15 @@ export default function Gender() {
       try {
         localStorage.setItem('gender', selectedGender); // Storing password in local storage
         // Log the selected gender to the console
-        console.log(selectedGender);
+        // console.log(selectedGender);
         // Navigate to the '/age' route
         navigate("/age");
       } catch (error) {
         console.error('Error:', error);
-        alert('An error occurred. Please try again later.');
+        setErrorMessage('An error occurred. Please try again later.');
       }
     } else {
-      alert("Please select your gender.");
+      setErrorMessage("Please select your gender.");
     }
   };
 
@@ -51,6 +52,11 @@ export default function Gender() {
           <div className="card-title">Female</div>
         </div>
       </div>
+      {errorMessage && (
+          <div className="alert alert-danger mb-3" role="alert">
+            {errorMessage}
+          </div>
+        )}
       <div className="button-container">
         <a href="/lang" className="btn btn-back">Back</a>
         <button className="btn btn-dark btn-next" onClick={handleNextClick}>Next</button>

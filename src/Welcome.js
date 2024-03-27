@@ -7,7 +7,7 @@ export default function Welcome() {
 
     function handleOnClick() {
         navigate("/signin");
-        console.log("Button Clicked");
+        // console.log("Button Clicked");
     }
 
     return (

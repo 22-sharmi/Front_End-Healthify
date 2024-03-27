@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./What1.css"; // Import CSS file for styling
 
 export default function What1() {
     const navigate = useNavigate();
     const [selectedCards, setSelectedCards] = useState([]);
+    const [errorMessage, setErrorMessage] = useState('');
+    const errorRef = useRef(null); // Ref for error message
 
     // Function to toggle card selection
     const toggleCardSelection = (index) => {
@@ -17,6 +19,7 @@ export default function What1() {
         }
     };
 
+    // Function to handle click on 'Next' button
     const handleNextClick = () => {
         if (selectedCards.length > 0) {
             // Get the selected card titles
@@ -25,10 +28,14 @@ export default function What1() {
             // Store the selected card titles in local storage
             localStorage.setItem('what', JSON.stringify(selectedCardTitles));
             
-            console.log("Selected Card Titles: ", selectedCardTitles);
+            // console.log("Selected Card Titles: ", selectedCardTitles);
             navigate("/where");
         } else {
-            alert("Please select at least one card.");
+            setErrorMessage('Please select at least one card.'); // Set error message if no card is selected
+            // Scroll to error message if errorRef is initialized
+            if (errorRef.current) {
+                errorRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
     };
     
@@ -108,6 +115,11 @@ export default function What1() {
                         </div>
                     ))}
                 </div>
+                {errorMessage && (
+                    <div className="alert alert-danger" role="alert" ref={errorRef}>
+                        {errorMessage}
+                    </div>
+                )}
                 <center>
                     <button
                         type="button"
