@@ -11,7 +11,6 @@ import What1 from './What1';
 import Welcome from './Welcome';
 import AgeHeightWeight from './AgeHeightWeight';
 import Gender from './Gender';
-import Active1 from './Active1';
 import './Style.css'; // Import CSS file for loader styles
 
 export default function App() {
@@ -48,7 +47,7 @@ export default function App() {
           <Route path="/lang" element={<Lang />} />
           <Route path="/gen" element={<Gender />} />
           <Route path="/age" element={<AgeHeightWeight toggleLoading={toggleLoading} />} />
-          <Route path="/active" element={<Active1 toggleLoading={toggleLoading} />} />
+          <Route path="/active" element={<Active toggleLoading={toggleLoading} />} />
           <Route path="/next" element={<Health/>} />
         </Routes>
       </BrowserRouter>
