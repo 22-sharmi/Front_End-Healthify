@@ -32,10 +32,10 @@ export default function Welcome() {
                     <p className="lead fs-3">Supercharged by Next-Gen AI</p>
                     <button className="btn btn-dark join-btn" onClick={handleOnClick} type="button">Chat With US</button>
                 </div>
-                <img src="https://www.healthifyme.com/in/images/Banner_Feb1-p-800.png" width={"450px"} alt="Coach"/>
+                <img src="https://www.healthifyme.com/pro/images/Ria_Card.png" width={"500px"} alt="Coach"/>
             </div>
-            <div className="video-container m-3">
-            <img src="https://www.healthifyme.com/in/images/Snap-Banner-p-800.png" width={"450px"} alt="Coach"/>
+            <div className="video-container m-5">
+            <img src="https://images.indianexpress.com/2023/09/healthifyme-snap-inline.jpg" width={"450px"} alt="Coach"/>
                 <div className="overlay-content">
                     <h2 className="fs-1">Too much on your plate to track?</h2>
                     <p className="lead fs-3">#JustHealthify with <span className="text-success">HealthifySnapTM</span></p>
@@ -48,7 +48,7 @@ export default function Welcome() {
                     <p className="lead fs-3">#JustHealthify with <span className="text-success">HealthifyCGM</span></p>
                     <button className="btn btn-dark join-btn" onClick={handleOnClick} type="button">Get Pro</button>
                 </div>
-                <img src="https://www.healthifyme.com/in/images/CGM-Banner-p-800.png" width={"450px"} alt="Coach"/>
+                <img src="https://www.healthifyme.com/pro/images/Knowledge_1.png" width={"450px"} alt="Coach"/>
             </div>
             <div className="bg-success">
                 <p className="display-6 fw-bold text-light text-center">#JustHealthify</p>
